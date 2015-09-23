@@ -13,6 +13,7 @@ util = require 'util'
 
 	_.defaults options,
 		follow: 2
+		encoding: 'utf-8'
 
 	done = _.once done
 
@@ -55,7 +56,7 @@ util = require 'util'
 
 	socket = net.connect server.port, server.host, =>
 		socket.write server.query.replace '$addr', punycode.toASCII addr
-	socket.setEncoding 'utf-8'
+	socket.setEncoding options.encoding
 	if options.timeout?
 		socket.setTimeout options.timeout
 

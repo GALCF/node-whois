@@ -4,7 +4,7 @@
   "description": "A WHOIS client for NodeJS",
   "main": "index.js",
   "scripts": {
-    "prepublish": "make",
+    "postinstall": "make",
     "test": "make test"
   },
   "repository": {
