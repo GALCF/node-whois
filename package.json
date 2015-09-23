@@ -4,8 +4,8 @@
   "description": "A WHOIS client for NodeJS",
   "main": "index.js",
   "scripts": {
-    "postinstall": "cd ./node_modules/node-whois/; make; cd ../..;",
-    "test": "cd ./node_modules/node-whois/; make test; cd ../..;"
+    "postinstall": "make",
+    "test": "make test"
   },
   "repository": {
     "type": "git",
